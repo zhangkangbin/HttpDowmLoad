@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });*/
     }
 
-    // m
+    // 大小的换算
     private String getSize(long size) {
 
         long kb = 1024;
@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void stop() {
-
         //根据 Tag 取消请求
         OkHttpUtils.getInstance().cancelTag(url);
     }
@@ -79,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                  * @param progress     当前下载的进度
                  * @param networkSpeed 当前下载的速度   字节/秒
                  *                     */
+
                 .execute(new FileCallback("/sdcard/apktemp/", name) {
 
                     public void downloadProgress(long currentSize, long totalSize, float progress, long networkSpeed) {
